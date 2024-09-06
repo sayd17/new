@@ -20,11 +20,11 @@ function index() {
     setError,
     formState: { errors, isSubmitting },
   } = useForm({
-    defaultValues: {
-      email: "test@email.com",
-      name: "Abu Sayeed",
-      password: "********",
-    },
+    // defaultValues: {
+    //   email: "test@email.com",
+    //   name: "Abu Sayeed",
+    //   password: "********",
+    // },
     resolver: yupResolver(userSchema),
   });
 
@@ -53,10 +53,10 @@ function index() {
           //     return "Email must include @";
           //   }
           //   return true;
-          // },
+          // },+/* -````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````` */
         })}
         type="text"
-        placeholder="email@email.com"
+        // placeholder="email@email.com"
       />
       {errors.email && (
         <div className="text-red-500">{errors.email.message}</div>
@@ -76,9 +76,7 @@ function index() {
       {errors.password && (
         <div className="text-red-500">{errors.password.message}</div>
       )}
-      <button disabled={isSubmitting} type="submit">
-        {isSubmitting ? "Loading..." : "Submit"}
-      </button>
+      <button type="submit">{isSubmitting ? "Loading..." : "Submit"}</button>
       {errors.root && <div className="text-red-500">{errors.root.message}</div>}
     </form>
   );

@@ -11,9 +11,11 @@
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
     "next": "14.2.6",
+    "reac": "^0.0.0",
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.53.0",
+    "react-table": "^7.8.0",
     "yup": "^1.4.0"
   },
   "devDependencies": {
